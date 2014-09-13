@@ -13,7 +13,7 @@ else{
 	$source = file_get_contents($sourcePath);
 file_put_contents($file, $source);
 //header('Content-Type: text/plain');
-// FIRST STEP 1
+// STEP 1
 $str = $source ;
 $start = '{"list":[';
 $end = '"]}';
@@ -27,7 +27,7 @@ if (preg_match($pattern, $str, $matches)) {
     //echo '<p>your invisible Soldier is : </p>';
     //echo '<a href="https://www.facebook.com/'.$match.'">Click too see who ?</a>'. "<br>";
 }
-// SECEND STEP 2
+// SECOND STEP 2
 $str = $match ;
 
 $start = '"';
@@ -40,7 +40,7 @@ $pattern = sprintf(
 if (preg_match($pattern, $str, $matches)) {
     list(, $match) = $matches;
 }
-// THIRD STEP 3
+// STEP 3
 // Start the buffering //
 $text_line = $match;
 $text_line = explode('-2",',$text_line);
@@ -50,7 +50,7 @@ echo $match ;
 
 }
 echo '<br>';
-// FIRTH STEP 4
+// STEP 4
 if(!file_exists('./Export/clean.txt')){
 	echo 'No Source file found !'.'<br>';
 	exit;
