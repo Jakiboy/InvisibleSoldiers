@@ -1,7 +1,6 @@
 <?php
 /*
 @autor   : JIHAD SINNAOUR
-@Company : FuturComp 2014
 */
 $file = './Export/fb.xml';
 $sourcePath = "./Import/index.html" ;
